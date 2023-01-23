@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d83b7ba9.chunk.css",
+    "main.js": "/static/js/main.4e531287.chunk.js",
+    "main.js.map": "/static/js/main.4e531287.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ebfb707d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ebfb707d.js.map",
+    "static/js/2.8d5990fc.chunk.js": "/static/js/2.8d5990fc.chunk.js",
+    "static/js/2.8d5990fc.chunk.js.map": "/static/js/2.8d5990fc.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.d83b7ba9.chunk.css.map": "/static/css/main.d83b7ba9.chunk.css.map",
+    "static/js/2.8d5990fc.chunk.js.LICENSE.txt": "/static/js/2.8d5990fc.chunk.js.LICENSE.txt",
+    "static/media/large.css": "/static/media/Inter.f958c681.ttf",
+    "static/media/queer-women-rep.224f57b6.png": "/static/media/queer-women-rep.224f57b6.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ebfb707d.js",
+    "static/js/2.8d5990fc.chunk.js",
+    "static/css/main.d83b7ba9.chunk.css",
+    "static/js/main.4e531287.chunk.js"
+  ]
+}

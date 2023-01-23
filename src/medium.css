@@ -1,0 +1,265 @@
+/* body * {
+	color:                    hsla(210, 100%, 100%, 0.88) !important;
+	background:               hsla(210, 100%,  50%, 0.33) !important;
+	outline:    0.25rem solid hsla(210, 100%, 100%, 0.50) !important;
+} */
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter'), url(./fonts/Inter/Inter.ttf) format('truetype');
+}
+
+.debug-center {
+	display:         flex;
+	justify-content: center;
+	align-items:     center;
+}
+
+* {
+     box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  line-spacing: 1,2;
+}
+
+body, body * {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+	margin:          unset;
+	padding:         unset;
+	font-size:       unset;
+	color:           unset;
+	text-decoration: unset;
+}
+
+
+/*MEDIUM SCREEN */
+@media screen and (min-width: 0px) and (max-width: 0px){
+  .App {
+    display: grid;
+    grid-template-columns: 1fr 550px 1fr;
+  }
+
+  body {
+    grid-column: 2 / 3;
+  }
+
+  .Header {
+    background-color: white;
+    grid-column: 2 / 3;
+    display:         flex;
+    justify-content: center;
+    align-items:     center;
+  }
+
+  #logo {
+    max-width: 100%;
+  }
+
+  .Nav {
+    grid-column: 2 / 3;
+    background: linear-gradient(to right, white 0%, hsl(313, 100%, 78%) 100%);
+    display:         flex;
+    justify-content: left;
+    align-items:     center;
+    padding: 20px;
+  }
+
+  .Nav li {
+    display: inline;
+    padding: 5px;
+    color: hsl(0, 0%, 15%);
+    padding: 5px;
+    margin: 10px;
+    box-shadow: inset 0 -0.25em #D461A6;
+    transition: color 1s ease;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .Nav .Active {
+    color:  hsl(324, 100%, 30%);
+  }
+
+  .Aside {
+    background-color: grey;
+    margin: 10px;
+    margin-left: 0px;
+    grid-column: 2 / 3;
+    border-radius: 5px;
+  }
+
+  .Aside ul {
+    /* background-color: hsl(0, 0%, 95%); */
+    background-color: hsl(11, 80%, 82%);
+    animation: mymove 5s infinite;
+    border-radius: 5px;
+  }
+
+  .Aside li {
+    display: inline-block;
+    background-color: hsl(0, 0%, 85%);
+    margin: 5px;
+    padding: 5px;
+    margin: 10px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  @keyframes mymove {
+  50% {background-color: hsl(324, 80%, 72%);}
+  }
+
+  .Section {
+    grid-column: 2 / 3;
+  }
+
+  .Section h2 {
+    display: none;
+  }
+  .card-list{
+    padding: 5px;
+  }
+
+  .Footer {
+    background-color: white;
+    display:         flex;
+    justify-content: center;
+    align-items:     center;
+    grid-column: 2 / 3;
+  }
+
+  /* cards*/
+
+  .card {
+    border: 1px solid white;
+    background-color: white;
+    height: 270px;
+    width: 550px;
+  }
+
+  /* working well for cellphones, not so much for tablets */
+  .card img {
+    object-fit: cover;
+    height: 100%;
+    width: 550px;
+    /*max-width: 100%;*/
+    overflow: hidden;
+    opacity: 1;
+  }
+
+  .card--content {
+    position: relative;
+    top: -100px;
+    left: 30px;
+    background-color: rgb(255,255,255,0.5);
+    width: fit-content;
+  }
+
+  .card--content:hover {
+    position: relative;
+    top: -300px;
+    left: 30px;
+    background-color: rgb(228,160,136);
+    width: fit-content;
+    cursor: pointer;
+  }
+
+  #section-name {
+    left: 20px;
+    position: relative;
+  }
+
+  /* ---------------------------------------------*/
+  /* modal or detailed card */
+
+  .card-updated{
+    display: block;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    /*padding-top: 50px; Location of the box
+    padding-bottom: 50px;*/
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+
+  .card-updated--content {
+    margin: auto;
+    display: block;
+    width: 70%;
+    max-width: 100%;
+    text-align: left;
+    color: #ccc;
+    padding: 10px 0 20px 20px;
+    /* height: 150px; */
+  }
+
+  .card-updated img {
+    margin: auto;
+    display: block;
+    /* width: 80%; */
+    max-width: 100%;
+    /*max-height: 70%;*/
+  }
+
+
+  .card-updated--content, .card-updated > img {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+
+  @keyframes zoom {
+    from {transform: scale(0.1)}
+    to {transform: scale(1)}
+  }
+
+  button {
+    color: white;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 2px;
+    height: 2em;
+  }
+
+  button:hover {
+    color: white;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  .spoiler {
+    color: black;
+    background-color: black;
+    transition: color 2s ease-in;
+  }
+
+  .spoiler:clicked {
+    color: rgb(200,200,200);
+  }
+
+  .contenedor-flechas {
+    margin-left: 10px;
+  }
+
+  .flechas {
+    fill: #ccc;
+    stroke-width: 0px;
+  }
+
+  .flechas:hover {
+    fill: rgba(255,255,255,0.1);
+    stroke-width: 0px;
+  }
+}
